@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Sorry Baby... Please? 🥺❤️</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+
+      <div class="big-heart" id="heartMain">💔 → ❤️</div>
+      
+      <h1 id="title">I'm Sorry, Baby</h1>
+      
+      <p class="main-msg" id="question">I messed up bad... Will you forgive me?</p>
+
+      <!-- Stage 1: Forgiveness -->
+      <div class="buttons" id="forgiveButtons">
+        <button class="btn yes" onclick="forgiveYes()">Yes 🥺</button>
+        <button class="btn no" onclick="forgiveNo()">No 😠</button>
+      </div>
+
+      <!-- Stage 2: Valentine -->
+      <div class="buttons hidden" id="valentineButtons">
+        <button class="btn yes" onclick="valentineYes()">Yes! 💕</button>
+        <button class="btn no" onclick="valentineNo()">No 😒</button>
+      </div>
+
+      <!-- Cringe / Retry area (used for both stages) -->
+      <div id="cringeZone" class="hidden">
+        <p id="cringeLine" class="cringe"></p>
+        <div class="buttons">
+          <button class="btn yes" id="retryYesBtn">Okay... Yes</button>
+          <button class="btn no" id="retryNoBtn">Still No</button>
+        </div>
+      </div>
+
+      <!-- Happy ending -->
+      <div id="happyEnding" class="hidden">
+        <p class="yay">MY VALENTINE!!! 😭💖<br>Thank you baby, I love you the most in this world</p>
+        <div class="hearts">💕 💖 💝 💗 💓 💞 💘</div>
+        <p class="small-love">Can't wait to make this Valentine's Day special for you ❤️</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
